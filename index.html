@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kinolar Shu Yerda!</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="scene">
+    <div class="light light1"></div>
+    <div class="light light2"></div>
+
+    <div class="film film1">🎞</div>
+    <div class="film film2">🎬</div>
+
+    <div class="content">
+      <div class="logo">▶ KINO</div>
+
+      <h1 id="title">KINOLAR<br>SHU YERDA!</h1>
+
+      <p id="subtitle">
+        Siz sevgan kinolar — bir joyda!
+      </p>
+
+      <div class="line"></div>
+
+      <div class="categories" id="categories">
+        <span>🎥 KINOLAR</span>
+        <span>📺 SERIALLAR</span>
+        <span>🎨 MULTFILMLAR</span>
+      </div>
+    </div>
+
+    <div class="bottom">TOMOSHA BOSHLANADI...</div>
+    <div class="timer" id="timer">30</div>
+
+    <!-- QR-KOD VA MA'LUMOT -->
+    <div class="qr-box">
+      <div class="qr-placeholder">
+        <div id="qr"></div>
+      </div>
+      <div class="qr-info">
+        <h2>BATAFSIL MA'LUMOT</h2>
+        <p>Telefoningiz bilan<br>QR-kodni skaner qiling!</p>
+        <small>Sayt tez orada ishga tushadi.</small>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script src="app.js"></script>
+  <script>
+    // Hozircha sayt manzili o'rniga oddiy ma'lumot
+    new QRCode(document.getElementById("qr"), {
+      text: "KINOLAR SHU YERDA! Sayt tez orada ishga tushadi.",
+      width: 90,
+      height: 90,
+      colorDark: "#000000",
+      colorLight: "#ffffff"
+    });
+  </script>
+</body>
+</html>
